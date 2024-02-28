@@ -117,13 +117,7 @@ from sklearn.metrics import mean_squared_error
 
 
 
-# Assuming X1, X2, ... are your input features in the new dataset
+
 X_new = df1.iloc[:, :]
-
-# Standardize the features using the same scaler from the training data
- # Assuming 'scaler' is the one used during training
-
 y_pred = tree_model.predict(X_new)
-
-
 print(y_pred)
