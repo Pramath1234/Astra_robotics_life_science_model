@@ -83,7 +83,7 @@ These lines of code are the training code for the model:
    2. We scale the same, and insert the data in the existing model, which gives us the predicted output, i.e y_pred and our model is complete.
 ------------------------------------------------------------------------------
 
------------------------------DECISION TREE REGRESSION---------------------------------------------------------------------------------
+-----------------------------DECISION TREE REGRESSION-------------------------
 
 Decision Tree Regression is a machine learning algorithm used for predicting continuous numerical values. While decision trees are often associated with classification tasks, they can also be adapted for regression by predicting a continuous output instead of a categorical one.
 
