@@ -111,6 +111,8 @@ The following code first imports the necessary libraries, and then splits the da
 
 
 The below lines of code are used to create the new set of data for X columns which uses the dataset df1 which has no predefined Y columns. We are performing the below operations to predict the entire Y column based on the model we have trained in the previous section. We obtain the new y_pred columns after running the trained model on the set X_new, and we print it thus completing the model.
+
+
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.tree import DecisionTreeRegressor
