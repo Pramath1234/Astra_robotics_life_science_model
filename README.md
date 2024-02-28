@@ -84,41 +84,36 @@ These lines of code are the training code for the model:
 
 Decision Tree Regression is a machine learning algorithm used for predicting continuous numerical values. While decision trees are often associated with classification tasks, they can also be adapted for regression by predicting a continuous output instead of a categorical one.
 
-Once Pandas is imported as pd, perform the following import operations. The following code then splits the dataset into X and Y fields, where X has all the input columns, that is soil depth, humidity and other input parameters and Y has the output column that is probability of presence of life. Following which the dataset is split into training and testing sets wherein the test size is 20 percent of the dataset and the training set has 80 percent of the entire dataset and the randomness is designed to be 42.The next step would be to create a Decision Tree Regression model and then to train the created model. We then make the predictions on the trained dataset with the X_test set and store the predictions in the y_pred.The model is then evaluated todetermine the mean squared error and then it prints the y_pred value. 
-        import pandas as pd
+Once Pandas is imported as pd, perform the following import operations:
         from sklearn.model_selection import train_test_split
         from sklearn.tree import DecisionTreeRegressor
         from sklearn.metrics import mean_squared_error
 
-
+The following code splits the dataset into X and Y fields, where X has all the input columns, that is soil depth, humidity and other input parameters and Y has the output column that is probability of presence of life. 
         X = df2.iloc[:, :-1]  # Assuming last column is the target variable
         y = df2.iloc[:, -1]
-
-
+ 
+We will now have to split the dataset into training and testing sets wherein the test size is 20 percent of the dataset and the training set has 80 percent of the entire dataset and the randomness is designed to be 42. 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
+The next step would be to create a Decision Tree Regression model and then to train the created model. We then make the predictions on the trained dataset with the X_test set and store the predictions in the y_pred.
+
         tree_model = DecisionTreeRegressor(random_state=42)
-
-        # Train the model
         tree_model.fit(X_train, y_train)
-
-        # Make predictions on the test set
         y_pred = tree_model.predict(X_test)
 
-        # Evaluate the model
         mse = mean_squared_error(y_test, y_pred)
         print(f'Mean Squared Error: {mse}')
 
         print(y_pred)
 
+The above lines of code are designed to evaluate the model and then print the mean squared error the model. We are then printing the y_pred values. 
 
 The below lines of code are used to create the new set of data for X columns which uses the dataset df1 which has no predefined Y columns. We are performing the below operations to predict the entire Y column based on the model we have trained in the previous section. We obtain the new y_pred columns after running the trained model on the set X_new, and we print it thus completing the model.
-
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.tree import DecisionTreeRegressor
         from sklearn.metrics import mean_squared_error
-
 
         # Assuming X1, X2, ... are your input features in the new dataset
         X_new = df1.iloc[:, :]
@@ -126,7 +121,6 @@ The below lines of code are used to create the new set of data for X columns whi
         # Standardize the features using the same scaler from the training data
         # Assuming 'scaler' is the one used during training
 
-
         y_pred = tree_model.predict(X_new)
-
         print(y_pred)
+
