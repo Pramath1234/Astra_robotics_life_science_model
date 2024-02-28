@@ -24,6 +24,9 @@ These lines are same for both the codes, they perform the following actions:
 --------------------------------------------------------------------
 
 --------------------K-NEAREST NEIGHBOURS-----------------------------
+  
+   
+   
    1. import pandas as pd
       from sklearn.model_selection import train_test_split
       from sklearn.neighbors import KNeighborsRegressor
