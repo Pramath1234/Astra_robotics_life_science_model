@@ -24,7 +24,8 @@ These lines are same for both the codes, they perform the following actions:
 --------------------------------------------------------------------
 
 --------------------K-NEAREST NEIGHBOURS-----------------------------
-  K-Nearest Neighbours is a state of the art algorithm which helps us to regressively predict the values, given a set of input parameters.
+
+K-Nearest Neighbours is a state of the art algorithm which helps us to regressively predict the values, given a set of input parameters.
    
    
       1. import pandas as pd
